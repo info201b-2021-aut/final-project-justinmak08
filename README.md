@@ -5,7 +5,7 @@ This is where you will create your Github repo for your final project. Instructi
 
 ## Domain of Interest
 - Why are you interested in this field/domain?
- - Our domain of interest is related to environment field around the area of Pacific Northwest. We choose to observe the carbon footprint by the human activities that lead towards greenhouse impact in our local area. As example, specifically how the automotive or motor-operated vehicle impact our local environment? Could the change towards electric vehicle reduce the impact of carbon emission?. We will make a hypothesis based on the data collected and derive the impact of transportation over years on the environment.
+  - Our domain of interest is related to environment field around the area of Pacific Northwest. We choose to observe the carbon footprint by the human activities that lead towards greenhouse impact in our local area. As example, specifically how the automotive or motor-operated vehicle impact our local environment? Could the change towards electric vehicle reduce the impact of carbon emission?. We will make a hypothesis based on the data collected and derive the impact of transportation over years on the environment.
 - What other examples of data driven project have you found related to this domain (share at least 3)?
 
   - One of the data driven project is the Forest Fire in Pacific Northwest. In the website, they trying to research why the wildfire around Pacific Northwest have increased over the years and how the wildfire have changed or developed because of climate changes. The data presentation show the cumulative area burned due to climate change and without climate change from 1985 to 2015. Beside, the website present the fires and climate feed loop which showed how the cycle between wildfire and our climate change will resulted to more uncontrollable fires in the future. Nonetheless, the impact towards the wildlife due to climate changes and bad forest management will resulted towards more displaced wildlife and future extinction. [Forest Fires in the Pacific Northwest](https://storymaps.arcgis.com/stories/4aa9904b8d594293a4d695c0354feab2)
@@ -20,10 +20,15 @@ This is where you will create your Github repo for your final project. Instructi
 
 ### Dataset 1
 - Where did you download the data (e.g., a web URL)?
+  - https://cfpub.epa.gov/ghgdata/inventoryexplorer/index.html#transportation/entiresector/allgas/category/all
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+  - Data was collected by the EPA annually. Dataset includes data about how much carbon dioxide is released into the atmosphere per year by different categories (fossil fuels, fluorinated gasses, etc) 
 - How many observations (rows) are in your data?
+  - 29
 - How many features (columns) are in the data?
+  - 6
 - What questions (from above) can be answered using the data in this dataset?
+  - How much of total US greenhouse gasses are released by cars with internal combustion engines. How much emissions could be saved by taking them off the road and replacing them with electric vehicles.
 
 ### Dataset 2
 - Where did you download the data (e.g., a web URL)?
