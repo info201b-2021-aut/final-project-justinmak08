@@ -34,12 +34,16 @@ This is where you will create your Github repo for your final project. Instructi
   - How much of total US greenhouse gasses are released by cars with internal combustion engines. How much emissions could be saved by taking them off the road and replacing them with electric vehicles.
 
 ### Dataset 2
-Where did you download the data (e.g., a web URL)?
+- Where did you download the data (e.g., a web URL)?
   - [CO2 Emissions by Vehicle](https://www.kaggle.com/debajyotipodder/co2-emission-by-vehicles?select=CO2+Emissions_Canada.csv)
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+  - The data was collected by the Canadian government and it is collected annually, although this data is from one particular year. This data is aout the CO2 emissions of different models of cars in one year.   
 - How many observations (rows) are in your data?
+  - 7385
 - How many features (columns) are in the data?
+  - 12 
 - What questions (from above) can be answered using the data in this dataset?
+  - Which vehicles emit less CO2 in terms of their model, transmission, and fuel type? Which of these vehicles are becoming more or less common over the years? 
 
 ### Dataset 3
 - Where did you download the data (e.g., a web URL)?
