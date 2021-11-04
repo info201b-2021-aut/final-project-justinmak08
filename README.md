@@ -25,7 +25,7 @@ This is where you will create your Github repo for your final project. Instructi
 - Where did you download the data (e.g., a web URL)?
   - https://cfpub.epa.gov/ghgdata/inventoryexplorer/index.html#transportation/entiresector/allgas/category/all
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
-  - Data was collected by the EPA annually. Dataset includes data about how much carbon dioxide is released into the atmosphere per year by different categories (fossil fuels, fluorinated gasses, etc) 
+  - Data was collected by the EPA annually. Dataset includes data about how much carbon dioxide is released into the atmosphere per year by different categories (fossil fuels, fluorinated gasses, etc)
 - How many observations (rows) are in your data?
   - 29
 - How many features (columns) are in the data?
