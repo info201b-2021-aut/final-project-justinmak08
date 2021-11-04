@@ -47,7 +47,12 @@ This is where you will create your Github repo for your final project. Instructi
 
 ### Dataset 3
 - Where did you download the data (e.g., a web URL)?
+  - [Electric Vehicle Population Data](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2) 
 - How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
+  - This dataset is collected by Washington Department of Licensing by collecting the information of people registering their electric vehicles. This dataset shows the Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing (DOL).
 - How many observations (rows) are in your data?
+  - 82600
 - How many features (columns) are in the data?
+  - 15
 - What questions (from above) can be answered using the data in this dataset?
+  - How does the trend of usage in electric vehicle changes over years compared to the gas emission in transportation sector. Does the increase in usage of electric vehicle improve/reduce the gas emission overall.
