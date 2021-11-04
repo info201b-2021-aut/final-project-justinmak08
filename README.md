@@ -41,9 +41,9 @@ This is where you will create your Github repo for your final project. Instructi
 - How many observations (rows) are in your data?
   - 7385
 - How many features (columns) are in the data?
-  - 12 
+  - 12
 - What questions (from above) can be answered using the data in this dataset?
-  - Which vehicles emit less CO2 in terms of their model, transmission, and fuel type? Which of these vehicles are becoming more or less common over the years? 
+  - Which vehicles emit less CO2 in terms of their model, transmission, and fuel type? Which of these vehicles are becoming more or less common over the years?
 
 ### Dataset 3
 - Where did you download the data (e.g., a web URL)?
