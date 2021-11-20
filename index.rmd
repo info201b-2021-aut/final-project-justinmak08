@@ -11,7 +11,7 @@ output: html_document
 
 ```{r echo=FALSE}
 library("knitr")
-source("second.chart.R")
+source("second-chart.R")
 
 qplot(Electric_Vehicle_Population_Data$`Model Year`, geom = "histogram", xlab = "Model Year", ylab = "Number of Electric Vehicles", main = "Number of Electric Vehicles by Model Year in Washington State")
 ```
