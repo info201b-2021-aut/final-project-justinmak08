@@ -14,6 +14,7 @@ names(co2_year)[2] <- "Carbon Dioxide (million metric tons of CO2)"
 #   ))
 
 co2_over_year <- ggplot(co2_year, aes(x=Year, y=`Carbon Dioxide (million metric tons of CO2)`)) +
-  scale_x_continuous(breaks = seq(1990, 2020, by = 5)) + geom_line()
+  scale_x_continuous(breaks = seq(1990, 2020, by = 5)) + ggtitle("Carbon Dioxide released by Year") +
+  theme(plot.title = element_text(hjust = 0.5)) + geom_line() 
 # + geom_point(aes(x=Year, y=`Carbon Dioxide (million metric tons of CO2)`))
 
