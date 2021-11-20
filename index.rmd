@@ -4,9 +4,11 @@ output: html_document
 ---
 
 # Introduction
-  The datasets we are using are useful in exploring our domain of interest in the carbon footprint of human activities impacting the environment of the Pacific Northwest. The first dataset is about greenhouse gases in the transportation sector, which is collected by the EPA annually. This dataset shows how much carbon dioxide is released into the atmosphere per year by different categories (fossil fuels, fluorinated gasses, etc). The other dataset we found important to exploring our domain of interest is about electric vehicles in Washington State, collected by the Washington Department of Licensing. This dataset is important because it has information on the amount of electric vehicles being registered. These datasets are useful in learning how vehicles impact our local environment of the Pacific Northwest, and exploring the idea that changing towards electric vehicles could reduce this impact of carbon emission. 
+The datasets we are using are useful in exploring our domain of interest in the carbon footprint of human activities impacting the environment of the Pacific Northwest. The first dataset is about greenhouse gases in the transportation sector, which is collected by the EPA annually. This dataset shows how much carbon dioxide is released into the atmosphere per year by different categories (fossil fuels, fluorinated gasses, etc). The other dataset we found important to exploring our domain of interest is about electric vehicles in Washington State, collected by the Washington Department of Licensing. This dataset is important because it has information on the amount of electric vehicles being registered. These datasets are useful in learning how vehicles impact our local environment of the Pacific Northwest, and exploring the idea that changing towards electric vehicles could reduce this impact of carbon emission. 
 
 # Summary
+
+We made charts highlighting important information calculated from our data. First and foremost, knowing that there are 82585 electric vehicles registered is a good start because we can look at how that has changed over the years, where those vehicles are, and when they were made. Then, looking at the 15 different attributes is useful, although not all attributes were used in our charts, every attribute tells us a lot of information, like make and model year, county the car was registered, and what type of electric car they are; battery, plug-in hybrid, etc. Next we calculated the most expensive model of vehicle in the dataset, being a 918 SPYDER. Looking at the price of cars is extremely important, because it is something everyone looks at when purchasing a vehicle. What was found was that in the case of many of these vehicles, the higher range of the vehicle, the higher the price. We need to look at these variables if the goal for the future is to have everyone driving electric vehicles, and if that is attainable for the average person. Finally, in our summary info we calculated the minimum and maximum model year of the cars registered in this dataset, which were 1993 to 2022. This information is important because we need to look at the trends of vehicles being registered and if the the number of registered electric vehicles is rising. 
 
 ## Aggregate Table
 
@@ -17,7 +19,6 @@ source("table-of-summary-information.R")
 kable(full_electric_vehicle_population, caption = 'Electric Vehicle in Washington State')
 
 ```
-
 This table containing 5 example rows of data shows how an electric vehicle's range is proportional to its base MSRP (price). However, the data shows that there are diminishing returns as price gets to higher levels.
 
 ## First Chart
