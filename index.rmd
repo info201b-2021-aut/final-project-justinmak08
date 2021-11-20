@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Summary"
 output: html_document
 ---
 
@@ -21,6 +21,13 @@ kable(full_electric_vehicle_population, caption = 'Electric Vehicle in Washingto
 This table containing 5 example rows of data shows how an electric vehicle's range is proportional to its base MSRP (price). However, the data shows that there are diminishing returns as price gets to higher levels.
 
 ## First Chart
+```{r echo=FALSE}
+library("knitr")
+source("first-chart.R")
+
+co2_over_year
+```
+This line graph show the carbon dioxide released by the transportation sector from 1990 to 2019. Its intended to show the trend of gas emission by year in the United States. We could observed how the trend is increasing in general as more automotive vehicle been use throughout the year. However, there are significant decreases between 2008 to 2014 in gas emission indicating less carbon dioxide release in the transportation sector.
 
 ## Second Chart
 
