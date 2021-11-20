@@ -8,6 +8,18 @@ output: html_document
 
 # Summary
 
+## Aggregate Table
+
+```{r echo=FALSE}
+library("knitr")
+source("table-of-summary-information.R")
+
+kable(full_electric_vehicle_population, caption = 'Electric Vehicle in Washington State')
+
+```
+
+This table containing 5 example rows of data shows how an electric vehicle's range is proportional to its base MSRP (price). However, the data shows that there are diminishing returns as price gets to higher levels.
+
 ## First Chart
 
 ## Second Chart
@@ -24,16 +36,6 @@ This chart has the intention of displaying the number of electric vehicles in Wa
 ## Third Chart
 
 This [Electric Vehicle Population Data](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2) was provided by the State of Washington. It contains information about fully-electric and hybrid-electric cars registered in Washington State
-
-```{r echo=FALSE}
-library("knitr")
-source("table-of-summary-information.R")
-
-kable(full_electric_vehicle_population, caption = 'Electric Vehicle in Washington State')
-
-```
-
-This table containing 5 example rows of data shows how an electric vehicle's range is proportional to its base MSRP (price). However, the data shows that there are diminishing returns as price gets to higher levels.
 
 ```{r echo=FALSE}
 source("third-chart.R")
