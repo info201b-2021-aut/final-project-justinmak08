@@ -11,6 +11,5 @@ full_electric_vehicle_population <- rename(full_electric_vehicle_population, 'Ba
 full_electric_vehicle_population <- rename(full_electric_vehicle_population, 'Electric Range' = Electric.Range)
 
 greenhouse_gas_emissions <- read.csv('US_Greenhouse_Gas_Emissions_Transportation.csv') # Load CSV file
-greenhouse_gas_emissions <- select(greenhouse_gas_emissions, c(Year, Total))
-greenhouse_gas_emissions <- greenhouse_gas_emissions  %>% tail(5)
-
+greenhouse_gas_emissions <- select(greenhouse_gas_emissions, c(Year, Total)) # Select only year, total emissions
+greenhouse_gas_emissions <- greenhouse_gas_emissions  %>% tail(5) # Select most recent 5 years
