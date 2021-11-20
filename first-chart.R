@@ -4,7 +4,7 @@ library(styler)
 library(dplyr)
 
 # Importing dataset from the file
-gas_emission_data <- read.csv("/Users/anas/Desktop/Info_201/final-project-justinmak08/US_Greenhouse_Gas_Emissions_Transportation.csv")
+gas_emission_data <- read.csv("US_Greenhouse_Gas_Emissions_Transportation.csv")
 
 co2_year <- gas_emission_data %>% select(Year, Fossil.fuel.combustion..carbon.dioxide)
 names(co2_year)[2] <- "Carbon Dioxide (million metric tons of CO2)"
