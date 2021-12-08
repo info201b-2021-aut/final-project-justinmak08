@@ -32,10 +32,20 @@ interactive_page_1 <- tabPanel(
     p("interactive graph and info here")))
 
 # Create UI for interactive page 2
+year_range <- range(Electric_Vehicle_Population_Data_filtered$Model.Year)
+
 interactive_page_2 <- tabPanel(
-  "Page Title",
+  "Vehicles by Model Year",
   fluidPage(
-    p("interactive graph and info here")))
+    h1("Number of Electric Vehicles by Model Year")),
+sidebarLayout(sidebarPanel(sliderInput("model.year", "Model Year", min = year_range[1], max = year_range[2],
+                  value = year_range,
+                  sep = "",
+                  step = 1)
+    ), mainPanel(
+      plotOutput("plot_2")
+    )
+  ), p("info here"),)
 
 # Create UI for interactive page 3
 interactive_page_3 <- tabPanel(

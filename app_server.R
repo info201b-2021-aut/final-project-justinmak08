@@ -6,9 +6,21 @@ library(plotly)
 # data_wa <- read.csv("")
 wa_electric_vehicle_population <- read.csv("Electric_Vehicle_Population_Data.csv")
 
-# Define server logic ----
-server <- function(input, output) {
+Electric_Vehicle_Population_Data <- read.csv('Electric_Vehicle_Population_Data.csv')
+Electric_Vehicle_Population_Data_filtered <- Electric_Vehicle_Population_Data %>% filter(Model.Year != 2022)
 
+# Define server logic ----
+server <- function(input, output){
+
+#define for second interactive page
+  output$plot_2 <- renderPlot({
+    Model.Year    <- Electric_Vehicle_Population_Data_filtered[, 6]
+    bins <- seq(min(Model.Year), max(Model.Year))
+    
+    # draw the histogram
+    hist(Model.Year, breaks = bins, col = 'green', border = 'white')})
+
+    
   # Scatterplot
   wa_electric_vehicle_population <- read.csv('Electric_Vehicle_Population_Data.csv') # Load CSV file
   full_electric_vehicle_population <- filter(wa_electric_vehicle_population, wa_electric_vehicle_population$Electric.Vehicle.Type == 'Battery Electric Vehicle (BEV)' & wa_electric_vehicle_population$Base.MSRP > 0)
@@ -24,7 +36,6 @@ server <- function(input, output) {
   })
 
 
-
-
   # Create break for Conclusion page (if necessary)
 }
+
