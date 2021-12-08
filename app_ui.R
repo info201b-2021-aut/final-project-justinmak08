@@ -42,10 +42,10 @@ sidebarLayout(sidebarPanel(sliderInput("model.year", "Model Year", min = year_ra
                   value = year_range,
                   sep = "",
                   step = 1)
-    ), mainPanel(
+    ), mainPanel((
       plotOutput("plot_2")
     )
-  ), p("info here"),)
+  ), p("This chart helps to answer the question, “What are the trends in the number of electric and hybrid cars being produced and sold?” It displays the number of electric vehicles in Washington states, sorted by the model year of those vehicles. An upward trend can be seen through this chart, displaying that many more electric vehicles are being produced and purchased in recent years.")),)
 
 # Create UI for interactive page 3
 interactive_page_3 <- tabPanel(
