@@ -19,4 +19,3 @@ summary_info <- list(
   "Earliest model year recorded in data set" =
     earliest_model
 )
-

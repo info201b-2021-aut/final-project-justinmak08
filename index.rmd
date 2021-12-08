@@ -12,6 +12,8 @@ We made charts highlighting important information calculated from our data. Firs
 
 ## Aggregate Table
 
+### Washington Electric Vehicles
+
 ```{r echo=FALSE}
 library("knitr")
 source("table-of-summary-information.R")
@@ -20,6 +22,18 @@ kable(full_electric_vehicle_population, caption = 'Electric Vehicle in Washingto
 
 ```
 This table containing 5 example rows of data shows how an electric vehicle's range is proportional to its base MSRP (price). However, the data shows that there are diminishing returns as price gets to higher levels.
+
+### Greenhouse Gasses
+
+```{r echo=FALSE}
+library("knitr")
+source("table-of-summary-information.R")
+
+kable(greenhouse_gas_emissions, caption = 'US Transportation Greenhouse Gas Emissions By Year')
+
+```
+
+This table containing 5 rows of the most recent years shows how total US greenhouse gas emissions due to transportation has been increasing year over year.
 
 ## First Chart
 ```{r echo=FALSE}

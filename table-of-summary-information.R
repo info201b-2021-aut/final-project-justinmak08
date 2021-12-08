@@ -11,6 +11,11 @@ full_electric_vehicle_population <- distinct(full_electric_vehicle_population)
 full_electric_vehicle_population <- rename(full_electric_vehicle_population, 'Base MSRP' = Base.MSRP)
 full_electric_vehicle_population <- rename(full_electric_vehicle_population, 'Electric Range' = Electric.Range)
 
+
+greenhouse_gas_emissions <- read.csv('US_Greenhouse_Gas_Emissions_Transportation.csv') # Load CSV file
+greenhouse_gas_emissions <- select(greenhouse_gas_emissions, c(Year, Total)) # Select only year, total emissions
+greenhouse_gas_emissions <- greenhouse_gas_emissions  %>% tail(5) # Select most recent 5 years
+
 gas_emission_data <- read.csv("US_Greenhouse_Gas_Emissions_Transportation.csv")
 
 aggregated <- gas_emission_data %>% mutate(
@@ -23,8 +28,9 @@ aggregated <- gas_emission_data %>% mutate(
 summary_info <- list(
   "Total Carbon Dioxide" = aggregated[1 ,1],
   "Total flourinated gas" = aggregated[1 ,2],
-  "Toatl other greenhouse gas" =
+  "Total other greenhouse gas" =
     aggregated[1 ,3],
   "Total other transport categories" =
     aggregated[1 ,4]
 )
+summary_info
