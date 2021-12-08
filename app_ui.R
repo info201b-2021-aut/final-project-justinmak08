@@ -6,8 +6,16 @@ library(plotly)
 # Read dataset
 source("app_server.R")
 
-# Create UI for Intro page
+# Create buttons
+max_msrp <- sliderInput(
+  inputId = "max_msrp",
+  h3("Select Max Vehicle MSRP to Plot"),
+  min = 0,
+  max = 100000,
+  value = 100000
+)
 
+# Create UI for Intro page
 intro_page <- tabPanel(
   "Introduction",
   fluidPage(
@@ -18,28 +26,31 @@ intro_page <- tabPanel(
 )
 
 # Create UI for interactive page 1
-
 interactive_page_1 <- tabPanel(
   "Page Title",
   fluidPage(
     p("interactive graph and info here")))
 
 # Create UI for interactive page 2
-
 interactive_page_2 <- tabPanel(
   "Page Title",
   fluidPage(
     p("interactive graph and info here")))
 
 # Create UI for interactive page 3
-
 interactive_page_3 <- tabPanel(
-  "Page Title",
-  fluidPage(
-    p("interactive graph and info here")))
+  "Comparing Electric Vehicle MSRP to Electric Range",
+  sidebarLayout(
+    sidebarPanel(
+      max_msrp
+    ),
+    mainPanel(
+      plotOutput("scatterplot_msrp_range")
+    )
+  )
+)
 
 # Create UI for conclusion page
-
 conclusion_page <- tabPanel(
   "Summary",
   fluidPage(
