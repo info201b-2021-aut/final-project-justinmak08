@@ -44,7 +44,7 @@ server <- function(input, output){
   # Data
   wa_electric_vehicle_population <- read.csv('Electric_Vehicle_Population_Data.csv') # Load CSV file
   full_electric_vehicle_population <- filter(wa_electric_vehicle_population, wa_electric_vehicle_population$Electric.Vehicle.Type == 'Battery Electric Vehicle (BEV)' & wa_electric_vehicle_population$Base.MSRP > 0)
-    
+
   #define for second interactive page
   output$year_range <- renderPlot({
     highest_msrp <- input$max_msrp
@@ -55,8 +55,8 @@ server <- function(input, output){
       geom_point()
     year_range
   })
-  
-  
+
+
   # Scatterplot
   output$scatterplot_msrp_range <- renderPlot({
     highest_msrp <- input$max_msrp
