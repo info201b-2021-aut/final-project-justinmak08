@@ -76,17 +76,16 @@ interactive_page_1 <- tabPanel(
 year_range <- range(Electric_Vehicle_Population_Data_filtered$Model.Year)
 
 interactive_page_2 <- tabPanel(
-  "Vehicles by Model Year",
-  fluidPage(
-    h1("Number of Electric Vehicles by Model Year")),
-  sidebarLayout(sidebarPanel(sliderInput("model.year", "Model Year", min = year_range[1], max = year_range[2],
-                                         value = year_range,
-                                         sep = "",
-                                         step = 1)
-  ), mainPanel(
-    plotOutput("plot_2")
+  "Comparing Electric Vehicle MSRP to Electric Range",
+  sidebarLayout(
+    sidebarPanel(
+      max_msrp
+    ),
+    mainPanel(
+      plotOutput("year_range")
+    )
   )
-  ), p("This chart helps to answer the question, “What are the trends in the number of electric and hybrid cars being produced and sold?” It displays the number of electric vehicles in Washington states, sorted by the model year of those vehicles. An upward trend can be seen through this chart, displaying that many more electric vehicles are being produced and purchased in recent years."),)
+)
 
 # Create UI for interactive page 3
 interactive_page_3 <- tabPanel(
@@ -99,7 +98,8 @@ interactive_page_3 <- tabPanel(
       plotOutput("scatterplot_msrp_range")
     )
   ),
-p("In this scatterplot, one can see the points fo different vehicle’s electric range and base MSRP. The data is presented in a way for users to slide to see different ranges of the price point, as the range of base MSRP’s is very large, so being able to customize which data are seen is very useful and makes it easier to interpret the data."))
+  p("In this scatterplot, one can see the points fo different vehicle’s electric range and base MSRP. The data is presented in a way for users to slide to see different ranges of the price point, as the range of base MSRP’s is very large, so being able to customize which data are seen is very useful and makes it easier to interpret the data.")
+)
 
 # Create UI for conclusion page
 conclusion_page <- tabPanel(
