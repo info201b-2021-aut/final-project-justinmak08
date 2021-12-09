@@ -20,7 +20,7 @@ intro_page <- tabPanel(
   "Introduction",
   fluidPage(
     h1("A Study on Carbon Emissions in the Pacific Northwest"),
-    p("Our domain of interest with this project is related to the environment field around the area of Pacific Northwest. We chose to observe the carbon footprint of human activities that has led towards greenhouse impacts in our local area. The questions we focused on with our research were based around specifically how vehicles are impact our local environment, and how the transition to the use of electric vehicles is moving along, and how it affects the local environment. How much of total US greenhouse gasses are released by cars with internal combustion engines? Could the change towards electric vehicles reduce the impact of carbon emission? Are more electric cars being produced? And finally, Is the range that comes with electric vehicles comparable for a feasible base MSRP so people are more open to switching to electric? To answer these questions, we analyzed data from", a(href="https://cfpub.epa.gov/ghgdata/inventoryexplorer/index.html#transportation/entiresector/allgas/category/all", "Greenhouse Gas Inventory Data Explorer"), "and from", a(href="https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2", "Electric Vehicle Population Data"),
+    p("Our domain of interest with this project is related to the environment field around the area of Pacific Northwest. We chose to observe the carbon footprint of human activities that has led towards greenhouse impacts in our local area. The questions we focused on with our research were based around specifically how vehicles are impact our local environment, and how the transition to the use of electric vehicles could happen, and how it affects the local environment. How much of total US greenhouse gasses are released by cars with internal combustion engines? Could the change towards electric vehicles reduce the impact of carbon emission? Are the electric cars being produced in more recent years improving on range? And finally, Is the range that comes with these electric vehicles comparable for a feasible base MSRP so people are more open to switching to electric? To answer these questions, we analyzed data from", a(href="https://cfpub.epa.gov/ghgdata/inventoryexplorer/index.html#transportation/entiresector/allgas/category/all", "Greenhouse Gas Inventory Data Explorer"), "and from", a(href="https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2", "Electric Vehicle Population Data"),
       img(src = "https://www.sharedmobility.news/wp-content/uploads/2017/06/CO2-emissions.jpg")
     )
   ),)
@@ -76,7 +76,7 @@ interactive_page_1 <- tabPanel(
 year_range <- range(Electric_Vehicle_Population_Data_filtered$Model.Year)
 
 interactive_page_2 <- tabPanel(
-  "Comparing Electric Vehicle MSRP to Electric Range",
+  "Comparing the Model Year of Vehicles to Electric Range",
   sidebarLayout(
     sidebarPanel(
       max_msrp
@@ -84,7 +84,7 @@ interactive_page_2 <- tabPanel(
     mainPanel(
       plotOutput("year_range")
     )
-  )
+  ), p("In this scatterplot, what is demonstrated is the change in range as model years are becoming more recent.The data is presented in this way becasue it is an effective way to visualize the increase in range as the model year increases.")
 )
 
 # Create UI for interactive page 3
@@ -98,7 +98,7 @@ interactive_page_3 <- tabPanel(
       plotOutput("scatterplot_msrp_range")
     )
   ),
-  p("In this scatterplot, one can see the points fo different vehicle’s electric range and base MSRP. The data is presented in a way for users to slide to see different ranges of the price point, as the range of base MSRP’s is very large, so being able to customize which data are seen is very useful and makes it easier to interpret the data.")
+  p("In this scatterplot, one can see the points for different vehicle’s electric range and base MSRP. The data is presented in a way for users to slide to see different ranges of the price point, as the range of base MSRP’s is very large, so being able to customize which data are seen is very useful and makes it easier to interpret the data.")
 )
 
 # Create UI for conclusion page
@@ -107,7 +107,8 @@ conclusion_page <- tabPanel(
   fluidPage(
     p("On the first page, the graph shows the carbon dioxide that is being released each year in different jurisdictions of the transportation sector. Here the major takeaway is first, the sheer quantity of greenhouse gasses which are released in the transportation sector. Furthermore, as seen in the graph, most of the greenhouse gasses being released are carbon dioxide by fossil fuel combustion. This is important information to take away from the data because it leads to the conclusion that it is crucial that we need to decrease these numbers in the coming years, one possibility of that being switching to electric vehicles over gas-powered vehicles."), 
 
-p("On the second page,"),
+p("On the second page, the scatterplot shows the relationship between electric vehicle’s model year and it’s electric range. What we takeaway from this plot is that, in general it is a positive trend, which means that overall, range is getting better in recent manufacturing years. It is important to note however, that there were many outliers where the model year was older and the range was good. These are important takeaways to have because the goal is to have a greater range with less electricity to decrease energy usage in the transportation sector. 
+"),
 
 p("On the third page, the scatterplot demonstrates the relationship between electric vehicle range and the electric vehicle’s base MSRP. The major takeaway from this plot is that there is a positive correlation between the two variables, where a higher base MSRP is likely to be accompanied with a higher range. However, as the base MSRP gets higher, there are diminishing returns with the range. This is important to note because the goal is to decrease CO2 Emissions. If we want people to do this in the transportation sector, it needs to be feasible, so this demonstrates that yes, a higher range can come with a higher base MSRP, but not to unrealistic lengths.")
 ))
