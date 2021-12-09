@@ -20,10 +20,10 @@ intro_page <- tabPanel(
   "Introduction",
   fluidPage(
     h1("A Study on Carbon Emissions in the Pacific Northwest"),
-    p("write introduction here"),
+    p("Our domain of interest with this project is related to the environment field around the area of Pacific Northwest. We chose to observe the carbon footprint of human activities that has led towards greenhouse impacts in our local area. The questions we focused on with our research were based around specifically how vehicles are impact our local environment, and how the transition to the use of electric vehicles is moving along, and how it affects the local environment. How much of total US greenhouse gasses are released by cars with internal combustion engines? Could the change towards electric vehicles reduce the impact of carbon emission? Are more electric cars being produced? And finally, Is the range that comes with electric vehicles comparable for a feasible base MSRP so people are more open to switching to electric? To answer these questions, we analyzed data from", a(href="https://cfpub.epa.gov/ghgdata/inventoryexplorer/index.html#transportation/entiresector/allgas/category/all", "Greenhouse Gas Inventory Data Explorer"), "and from", a(href="https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2", "Electric Vehicle Population Data"),
     img(src = "https://www.sharedmobility.news/wp-content/uploads/2017/06/CO2-emissions.jpg")
   )
-)
+),)
 
 # Create UI for interactive page 1
 interactive_page_1 <- tabPanel(
@@ -45,8 +45,7 @@ sidebarLayout(sidebarPanel(sliderInput("model.year", "Model Year", min = year_ra
     ), mainPanel(
       plotOutput("plot_2")
     )
-  ), p("This chart helps to answer the question, “What are the trends in the number of electric and hybrid cars being produced and sold?” It displays the number of electric vehicles in Washington states, sorted by the model year of those vehicles. An upward trend can be seen through this chart, displaying that many more electric vehicles are being produced and purchased in recent years. 
-"),)
+  ), p("This chart helps to answer the question, “What are the trends in the number of electric and hybrid cars being produced and sold?” It displays the number of electric vehicles in Washington states, sorted by the model year of those vehicles. An upward trend can be seen through this chart, displaying that many more electric vehicles are being produced and purchased in recent years."),)
 
 # Create UI for interactive page 3
 interactive_page_3 <- tabPanel(
