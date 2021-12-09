@@ -14,7 +14,7 @@ server <- function(input, output){
 
 #define for second interactive page
   output$plot_2 <- renderPlot({
-    Model.Year    <- Electric_Vehicle_Population_Data_filtered[, 6]
+    Model.Year <- (Electric_Vehicle_Population_Data_filtered[, 6])
     bins <- seq(min(Model.Year), max(Model.Year))
     
     # draw the histogram

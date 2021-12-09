@@ -62,7 +62,7 @@ interactive_page_3 <- tabPanel(
 
 # Create UI for conclusion page
 conclusion_page <- tabPanel(
-  "Summary",
+  "Summary Takeaways",
   fluidPage(
     p("write conclusion here")))
 
