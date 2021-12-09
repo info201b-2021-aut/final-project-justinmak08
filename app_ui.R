@@ -98,14 +98,19 @@ interactive_page_3 <- tabPanel(
     mainPanel(
       plotOutput("scatterplot_msrp_range")
     )
-  )
-)
+  ),
+p("In this scatterplot, one can see the points fo different vehicle’s electric range and base MSRP. The data is presented in a way for users to slide to see different ranges of the price point, as the range of base MSRP’s is very large, so being able to customize which data are seen is very useful and makes it easier to interpret the data."))
 
 # Create UI for conclusion page
 conclusion_page <- tabPanel(
   "Summary Takeaways",
   fluidPage(
-    p("write conclusion here")))
+    p("On the first page, the graph shows the carbon dioxide that is being released each year in different jurisdictions of the transportation sector. Here the major takeaway is first, the sheer quantity of greenhouse gasses which are released in the transportation sector. Furthermore, as seen in the graph, most of the greenhouse gasses being released are carbon dioxide by fossil fuel combustion. This is important information to take away from the data because it leads to the conclusion that it is crucial that we need to decrease these numbers in the coming years, one possibility of that being switching to electric vehicles over gas-powered vehicles."), 
+
+p("On the second page,"),
+
+p("On the third page, the scatterplot demonstrates the relationship between electric vehicle range and the electric vehicle’s base MSRP. The major takeaway from this plot is that there is a positive correlation between the two variables, where a higher base MSRP is likely to be accompanied with a higher range. However, as the base MSRP gets higher, there are diminishing returns with the range. This is important to note because the goal is to decrease CO2 Emissions. If we want people to do this in the transportation sector, it needs to be feasible, so this demonstrates that yes, a higher range can come with a higher base MSRP, but not to unrealistic lengths.")
+))
 
 # Define UI -----
 ui <- navbarPage(
